@@ -1,0 +1,112 @@
+﻿body {
+    /*padding-top: 50px;*/
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    background-color: #777;
+    border-color: #fff
+}
+
+/* NavBar Style */
+.navbar{
+    height: 10vh;
+}
+.navbar-brand{
+    font-size: 30px;
+    letter-spacing: 10px;
+    font-weight: bolder;
+
+}
+.nav-link {
+    font-size: 20px;
+}
+@media only screen and (max-width: 2561px) and (min-width: 1930px)
+{
+    .navbar{
+        height: 7vh;
+    }
+    .navbar-brand{
+        font-size: 40px
+    }
+    .nav-link{
+        font-size: 30px
+    }
+}
+/* End of NavBar Style */
+
+/* Greetings Style */
+
+.greetingsContainer{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.greetingsContainer > div > h1{
+    font-size: 80px;
+}
+.greetingsText {
+    position: relative;
+    animation-name: greetings;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+}
+.nameText {
+    position: relative;
+    animation-name: name;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+}
+@keyframes greetings{
+    0% {
+        left: 150px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+@keyframes name {
+    0% {
+        right: 150px;
+    }
+
+    100% {
+        right: 0px;
+    }
+}
+
+/* End of Greetings Style */
+
+/* About Style */
+
+.aboutContainer {
+    height: 100%;
+}
+
+/* End of About Style */
