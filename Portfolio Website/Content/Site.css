@@ -47,6 +47,7 @@ textarea {
     top: 0;
     width: 100%;
     z-index: 1;
+    padding: 0 15px;
 }
 
 .navbar-collapse {
@@ -60,7 +61,7 @@ textarea {
 }
 
 .nav-link {
-    margin: 2px;
+    margin: 5px;
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
@@ -86,16 +87,21 @@ textarea {
 
 @media only screen and (max-width: 990px) {
     .navbar {
-        height: 100%;
+        height: 200%;
         position: relative;
     }
-
+    .navbar-brand{
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .nav-link {
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        height: calc(100vh / 6.8);
+        height: calc(100vh / 5.9);
     }
 }
 /* End of NavBar Style */
@@ -103,17 +109,18 @@ textarea {
 /* Greetings Style */
 
 #greetingsContainer {
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
+    background-color: brown;
 }
 
-    #greetingsContainer > div > h1 {
-        font-size: 80px;
-    }
+#greetingsContainer > div > h1 {
+    font-size: 80px;
+}
 
 .greetingsText {
     position: relative;
@@ -172,6 +179,33 @@ textarea {
     /*animation: slideAnimation 3s ease-out;*/
 }
 
+.aboutContent{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 20% 70%;
+    margin-left: 5%;
+}
+
+.aboutImg {
+    display: flex;
+    justify-content: flex-end;
+}
+.aboutImg > img {
+    width: 100%;
+    height: 100%;
+}
+
+.aboutTxt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.aboutTxt > p{
+    font-size: 25px
+}
+
 @keyframes slideAnimation {
     0% {
         right: 150px;
@@ -179,6 +213,28 @@ textarea {
 
     100% {
         right: 0px;
+    }
+}
+
+@media only screen and (max-width: 3000px) and (min-width: 1990px) {
+    .aboutTxt > p{
+        font-size: 35px;
+    }
+}
+@media only screen and (max-width: 1050px) {
+    #aboutContainer {
+        height: 100%;
+    }
+
+    .aboutContent {
+        grid-template-columns: 55%;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .aboutImg {
+        margin: 0;
+        margin-bottom: 15%;
     }
 }
 
@@ -336,7 +392,7 @@ textarea {
 
 /* Work Experience Style */
 #workContainer {
-    height: 100%;
+    height: 100vh;
 }
 
 .workHeader {
@@ -351,100 +407,90 @@ textarea {
     color: #e04a4a;
     text-transform: uppercase;
     font-weight: bolder;
+    
 }
 
 .work {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-.work > .card{
-    height: calc(150vh / 4);
-    width: 20%;
-    text-align: center;
-    padding: 20px;
-    display:  flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 1%;
-    border-radius: 20px;
-}
-/*.education > .card > h4,.education > .card > h5, education > .card > h6{
-    margin-top: 2%;
+.work > .workCards{
     display: flex;
-}*/
-.work > .card > img{
-    width: 20%;
-    margin: 10px;
+    width: 50%;
+    margin: 1% 0;
+    
 }
-#dacpaImg {
-    width: 100%;
+.work > .workCards > .workImgs {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    
 }
-
+.work > .workCards > .workImgs > img {
+    width: 9vw;
+}
+#dacpaImg{
+    height: 60%;
+    width: 15vw;
+}
+.work > .workCards > .workTxts{
+    width: 70%;
+}
+.work > .workCards > .workTxts > h4 {
+    font-weight: bolder;
+    text-transform: uppercase;
+}
 @media only screen and (max-width: 3000px) and (min-width: 1990px) {
-    .work {
+    .work > .workCards > .workImgs > img {
+        width: 15vw;
     }
-
-    .work > .card{
+    #dacpaImg{
+        height: 80%;
+        width: 20vw;
     }
-    .work > .card > h4{
-        font-size: 35px;
+    .work > .workCards > .workTxts > h4 {
+        font-size: 30px;
     }
-    .work > .card > h5 {
+    .workTxts > h5 {
         font-size: 25px;
     }
-    .work > .card > h6{
-        font-size: 20px;
-    }
-    .work > .card > img{
-        width: 30%;
-        margin: 20px;
+    .workTxts > h6{
+        font-size: 20px
     }
 }
 @media only screen and (max-width: 1025px) and (min-width: 769px) {
-    .work {
-        display: grid;
-        gap: 10px;
-        grid-template-columns: 48% 48%;
-    }
-
-    .work > .card{
-        height: calc(100vh / 3.2);
-        width: calc(100vw / 2.1);
-    }
-    .work > .card > img{
-        width: 15%;
-        margin: 20px;
-    }
+    
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1254px) {
     #workContainer {
         height: 100%;
     }
-    .work {
-        display: flex;
+    .work > .workCards > .workImgs {    
+        width: 100%;
+    }
+    .work > .workCards > .workImgs > img {
+        width: 20vw;
+    }
+    #dacpaImg{        
+        height: 30%;
+        width: 25vw;
+    }
+}
+@media only screen and (max-width: 755px) {
+    .work > .workCards{
         flex-direction: column;
-        gap: 10px;
-        justify-content: center;
-        align-content: center;
     }
-
-    .work > .card{
-        height: calc(100vh / 3.2);
-        width: 90%;
+    .work > .workCards > .workImgs {  
+        margin: 5% 0;
     }
-    .work > .card > h4{
+    #dacpaImg {
+        width: 50vw;
     }
-    .work > .card > h5 {
-    }
-    .work > .card > h6{
-    }
-    .work > .card > img{
-        width: 15%;
-        margin: 20px;
+    .work > .workCards > .workTxts{
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -488,6 +534,37 @@ textarea {
     color: #e04a4a;
     text-transform: uppercase;
     font-weight: bolder;
+}
+
+.contact {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 20% 20% 20% 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact > .card {
+    height: calc(150vh / 5);
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1%;
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 3000px) and (min-width: 1990px) {
+    
+}
+@media only screen and (max-width: 1025px) and (min-width: 769px) {
+    
+}
+@media only screen and (max-width: 769px) {
+    
 }
 
 /* End of Contact Me Style */

@@ -10,7 +10,8 @@ namespace Portfolio_Website.Controllers
     {
         public ActionResult Index()
         {
-            return View();        }
+            return View();        
+        }
 
     }
 }
