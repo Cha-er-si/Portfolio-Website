@@ -32,7 +32,7 @@
     }
     
 
-    <div class="container body-content">
+    <div class="">
         @RenderBody()
 
         @{
@@ -46,13 +46,31 @@
 </body>
 </html>
 @*<script>
-    const currentLocation = location.href;
-    const menuItem = document.querySelectorAll('.nav-link');
-    const menuLength = menuItem.length;
+    //const currentLocation = location.href;
+    //const menuItem = document.querySelectorAll('.nav-link');
+    //const menuLength = menuItem.length;
 
-    for (var i = 0; i < menuLength; i++) {
-        if (menuItem[i].href === currentLocation) {
-            menuItem[i].className = "nav-link active";
-        }
+    //for (var i = 0; i < menuLength; i++) {
+    //    if (menuItem[i].href === currentLocation) {
+    //        menuItem[i].className = "nav-link active";
+    //    }
+    //}
+    const headers = document.querySelector('.headers');
+
+    window.addEventListener('scroll', checkHeaders);
+
+    function checkHeaders() {
+        const triggerBottom = window.innerHeight / 5 * 4;
+
+        headers.forEach(header => {
+            const headerTop = header.getBoundingClientRect().top;
+
+            if (headerTop < triggerBottom) {
+                header.classList.add('show');
+            }
+            else {
+                header.classList.remove('show');
+            }
+        })
     }
 </script>*@

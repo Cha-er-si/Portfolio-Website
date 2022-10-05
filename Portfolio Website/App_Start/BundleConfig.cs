@@ -24,7 +24,7 @@ namespace Portfolio_Website
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap-darkly.css",
-                      "~/Content/site.css"));
+                      "~/Content/Site.css"));
         }
     }
 }

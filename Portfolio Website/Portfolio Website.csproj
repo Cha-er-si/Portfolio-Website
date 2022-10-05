@@ -144,6 +144,13 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Design\Images\Bastion.png" />
+    <Content Include="Design\Images\Bastion1.jpg" />
+    <Content Include="Design\Images\bes.png" />
+    <Content Include="Design\Images\dacpa.png" />
+    <Content Include="Design\Images\dacpa1.png" />
+    <Content Include="Design\Images\olfu.png" />
+    <Content Include="Design\Images\onhs.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
