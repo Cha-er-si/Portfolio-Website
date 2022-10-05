@@ -66,10 +66,9 @@ textarea {
     text-transform: uppercase;
 }
 
-    .nav-link:hover, .nav-link:focus {
-        background-color: brown;
-        border-radius: 20px;
-    }
+.nav-link:hover, .nav-link:focus {
+    background-color: brown;
+}
 
 @media only screen and (max-width: 2561px) and (min-width: 1930px) {
     .navbar {
@@ -166,12 +165,12 @@ textarea {
     align-items: center;
 }
 
-    .aboutHeader > h1 {
-        color: #e04a4a;
-        text-transform: uppercase;
-        font-weight: bolder;
-        /*animation: slideAnimation 3s ease-out;*/
-    }
+.aboutHeader > h1 {
+    color: #e04a4a;
+    text-transform: uppercase;
+    font-weight: bolder;
+    /*animation: slideAnimation 3s ease-out;*/
+}
 
 @keyframes slideAnimation {
     0% {
@@ -384,6 +383,71 @@ textarea {
 #dacpaImg {
     width: 100%;
 }
+
+@media only screen and (max-width: 3000px) and (min-width: 1990px) {
+    .work {
+    }
+
+    .work > .card{
+    }
+    .work > .card > h4{
+        font-size: 35px;
+    }
+    .work > .card > h5 {
+        font-size: 25px;
+    }
+    .work > .card > h6{
+        font-size: 20px;
+    }
+    .work > .card > img{
+        width: 30%;
+        margin: 20px;
+    }
+}
+@media only screen and (max-width: 1025px) and (min-width: 769px) {
+    .work {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 48% 48%;
+    }
+
+    .work > .card{
+        height: calc(100vh / 3.2);
+        width: calc(100vw / 2.1);
+    }
+    .work > .card > img{
+        width: 15%;
+        margin: 20px;
+    }
+}
+@media only screen and (max-width: 769px) {
+    #workContainer {
+        height: 100%;
+    }
+    .work {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .work > .card{
+        height: calc(100vh / 3.2);
+        width: 90%;
+    }
+    .work > .card > h4{
+    }
+    .work > .card > h5 {
+    }
+    .work > .card > h6{
+    }
+    .work > .card > img{
+        width: 15%;
+        margin: 20px;
+    }
+}
+
 /* End of Work Experience Style */
 /* Projects Style */
 #projectContainer {
