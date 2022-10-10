@@ -1,6 +1,7 @@
 ﻿body {
     /*padding-top: 50px;*/
     padding-bottom: 20px;
+    height: 100%;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -26,7 +27,7 @@ textarea {
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
     background-color: #777;
-    border-color: #fff
+    border-color: #fff;
 }
 
 /*.headers.show {*/
@@ -71,39 +72,7 @@ textarea {
     background-color: brown;
 }
 
-@media only screen and (max-width: 2561px) and (min-width: 1930px) {
-    .navbar {
-        height: 7vh;
-    }
 
-    .navbar-brand {
-        font-size: 40px
-    }
-
-    .nav-link {
-        font-size: 30px
-    }
-}
-
-@media only screen and (max-width: 990px) {
-    .navbar {
-        height: 200%;
-        position: relative;
-    }
-    .navbar-brand{
-        height: 10vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .nav-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        height: calc(100vh / 5.9);
-    }
-}
 /* End of NavBar Style */
 
 /* Greetings Style */
@@ -134,6 +103,78 @@ textarea {
     animation-name: name;
     animation-duration: 0.5s;
     animation-timing-function: ease-out;
+}
+
+.circle1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: #303030;
+    position: absolute;
+    right: 0px;
+    top: 110px;
+    animation-name: bounce1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+.circle2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: #303030;
+    position: absolute;
+    bottom: 20px;
+    animation-name: bounce2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes bounce1{
+    0% {
+        right: 10px;
+        top: 110px;
+    }
+    25% {
+        right: 300px;
+        top: 110px;
+    }
+    50% {
+        right: 10px;
+        top: 110px;
+    }
+    75% {
+        right: 10px;
+        top: 500px;
+    }
+    100% {
+        right: 10px;
+        top: 110px;
+    }
+}
+@keyframes bounce2 {
+    0% {
+        left: 10px;
+        bottom: 20px;
+    }
+    25% {
+        left: 300px;
+        bottom: 20px;
+    }
+    50% {
+        left: 10px;
+        bottom: 20px;
+    }
+    75% {
+        left: 10px;
+        bottom: 500px;
+    }
+    100% {
+        left: 10px;
+        bottom: 20px;
+    }
 }
 
 @keyframes greetings {
@@ -216,27 +257,7 @@ textarea {
     }
 }
 
-@media only screen and (max-width: 3000px) and (min-width: 1990px) {
-    .aboutTxt > p{
-        font-size: 35px;
-    }
-}
-@media only screen and (max-width: 1050px) {
-    #aboutContainer {
-        height: 100%;
-    }
 
-    .aboutContent {
-        grid-template-columns: 55%;
-        justify-content: center;
-        margin: 0;
-    }
-
-    .aboutImg {
-        margin: 0;
-        margin-bottom: 15%;
-    }
-}
 
 /* End of About Style */
 
@@ -279,10 +300,12 @@ textarea {
     margin: 0 1%;
     border-radius: 20px;
 }
-/*.education > .card > h4,.education > .card > h5, education > .card > h6{
-    margin-top: 2%;
-    display: flex;
-}*/
+.education > .card:hover {
+    transform: scale(105%);
+}
+.education > .card:hover img{
+    transform: scale(200%);
+}
 .education > .card > img{
     width: 20%;
     margin: 10px;
@@ -290,104 +313,7 @@ textarea {
 #onhsImg{
     width: 37%;
 }
-/*.education > .card:nth-child(1){
-    position: relative;
-    right: 450px;
-}
-.education > .card:nth-child(2){
-    position: relative;
-    left: 450px;
-    bottom: 150px
-}
-.education > .card:nth-child(3){
-    position: relative;
-    right: 450px;
-    bottom: 150px
-}
-.education > .card:nth-child(4){
-    position: relative;
-    left: 450px;
-    bottom: 250px
-}*/
-@media only screen and (max-width: 3000px) and (min-width: 1990px) {
-    .education {
-        
-    }
 
-    .education > .card{
-    }
-    .education > .card > h4{
-        font-size: 35px;
-    }
-    .education > .card > h5 {
-        font-size: 25px;
-    }
-    .education > .card > h6{
-        font-size: 20px;
-    }
-    .education > .card > img{
-        width: 30%;
-        margin: 20px;
-    }
-    #onhsImg{
-        width: 57%;
-    }
-}
-@media only screen and (max-width: 1025px) and (min-width: 769px) {
-    .education {
-        display: grid;
-        gap: 10px;
-        grid-template-columns: 48% 48%;
-    }
-
-    .education > .card{
-        height: calc(100vh / 3.2);
-        width: calc(100vw / 2.1);
-    }
-    .education > .card > h4{
-    }
-    .education > .card > h5 {
-    }
-    .education > .card > h6{
-    }
-    .education > .card > img{
-        width: 15%;
-        margin: 20px;
-    }
-    #onhsImg{
-        width: 27%;
-    }
-}
-@media only screen and (max-width: 769px) {
-    #educationContainer {
-        height: 100%;
-    }
-    .education {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        justify-content: center;
-        align-content: center;
-    }
-
-    .education > .card{
-        height: calc(100vh / 3.2);
-        width: 90%;
-    }
-    .education > .card > h4{
-    }
-    .education > .card > h5 {
-    }
-    .education > .card > h6{
-    }
-    .education > .card > img{
-        width: 15%;
-        margin: 20px;
-    }
-    #onhsImg{
-        width: 27%;
-    }
-}
 /* End of Education Style */
 
 /* Work Experience Style */
@@ -431,6 +357,14 @@ textarea {
 .work > .workCards > .workImgs > img {
     width: 9vw;
 }
+.workCards:hover .workImgs{
+    transform: scale(105%);
+}
+.workCards:hover .workTxts>h4 {
+    transform: scale(125%);
+    position: relative;
+    left: 55px;
+}
 #dacpaImg{
     height: 60%;
     width: 15vw;
@@ -442,59 +376,9 @@ textarea {
     font-weight: bolder;
     text-transform: uppercase;
 }
-@media only screen and (max-width: 3000px) and (min-width: 1990px) {
-    .work > .workCards > .workImgs > img {
-        width: 15vw;
-    }
-    #dacpaImg{
-        height: 80%;
-        width: 20vw;
-    }
-    .work > .workCards > .workTxts > h4 {
-        font-size: 30px;
-    }
-    .workTxts > h5 {
-        font-size: 25px;
-    }
-    .workTxts > h6{
-        font-size: 20px
-    }
-}
-@media only screen and (max-width: 1025px) and (min-width: 769px) {
-    
-}
-@media only screen and (max-width: 1254px) {
-    #workContainer {
-        height: 100%;
-    }
-    .work > .workCards > .workImgs {    
-        width: 100%;
-    }
-    .work > .workCards > .workImgs > img {
-        width: 20vw;
-    }
-    #dacpaImg{        
-        height: 30%;
-        width: 25vw;
-    }
-}
-@media only screen and (max-width: 755px) {
-    .work > .workCards{
-        flex-direction: column;
-    }
-    .work > .workCards > .workImgs {  
-        margin: 5% 0;
-    }
-    #dacpaImg {
-        width: 50vw;
-    }
-    .work > .workCards > .workTxts{
-        width: 100%;
-        text-align: center;
-    }
-}
 
 /* End of Work Experience Style */
+
 /* Projects Style */
 #projectContainer {
     height: 100vh;
@@ -544,7 +428,7 @@ textarea {
     align-items: center;
 }
 
-.contact > .card {
+.contact > .card, .contact > .contactLinks > .card {
     height: calc(150vh / 5);
     width: 100%;
     text-align: center;
@@ -556,15 +440,250 @@ textarea {
     margin: 0 1%;
     border-radius: 20px;
 }
+.contactLinks{
+    text-decoration: none;
+    color: white;
+}
+
+.contactLinks:focus, .contactLinks:hover, .contactLinks:active {
+    color: brown;
+    transform: scale(105%);
+}
+.card > i {
+    margin: 3%;
+}
+
+/* End of Contact Me Style */
+
+/* Media Queries */
+
+@media only screen and (max-width: 2561px) and (min-width: 1930px) {
+    .navbar {
+        height: 7vh;
+    }
+
+    .navbar-brand {
+        font-size: 40px
+    }
+
+    .nav-link {
+        font-size: 30px
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .navbar {
+        height: 200%;
+        position: relative;
+    }
+
+    .navbar-brand {
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: calc(100vh / 5.9);
+    }
+}
+
+@media only screen and (max-width: 3000px) and (min-width: 1990px) {
+    .aboutTxt > p {
+        font-size: 35px;
+    }
+
+    /* Education */
+
+    .education > .card > h4 {
+        font-size: 35px;
+    }
+
+    .education > .card > h5 {
+        font-size: 25px;
+    }
+
+    .education > .card > h6 {
+        font-size: 20px;
+    }
+
+    .education > .card > img {
+        width: 30%;
+        margin: 20px;
+    }
+
+    #onhsImg {
+        width: 57%;
+    }
+
+    /* Work */
+    .work > .workCards > .workImgs > img {
+        width: 15vw;
+    }
+
+    #dacpaImg {
+        height: 80%;
+        width: 20vw;
+    }
+
+    .work > .workCards > .workTxts > h4 {
+        font-size: 30px;
+    }
+
+    .workTxts > h5 {
+        font-size: 25px;
+    }
+
+    .workTxts > h6 {
+        font-size: 20px
+    }
+
+    /* Contact */
+    .contact > .card > h3 {
+        font-size: 35px;
+    }
+
+    .contact > .card > h4 {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    #aboutContainer {
+        height: 100%;
+    }
+
+    .aboutContent {
+        grid-template-columns: 55%;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .aboutImg {
+        margin: 0;
+        margin-bottom: 15%;
+    }
+}
 
 @media only screen and (max-width: 3000px) and (min-width: 1990px) {
     
 }
+
 @media only screen and (max-width: 1025px) and (min-width: 769px) {
-    
-}
-@media only screen and (max-width: 769px) {
-    
+    .education {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 48% 48%;
+    }
+
+    .education > .card {
+        height: calc(100vh / 3.2);
+        width: calc(100vw / 2.1);
+    }
+    .education > .card > img {
+        width: 15%;
+        margin: 20px;
+    }
+
+    #onhsImg {
+        width: 27%;
+    }
+
+    /* Contact */
+    .contact {
+        grid-template-columns: 48% 48%;
+    }
 }
 
-/* End of Contact Me Style */
+@media only screen and (max-width: 769px) {
+    #educationContainer {
+        height: 100%;
+    }
+
+    .education {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .education > .card {
+        height: calc(100vh / 3.2);
+        width: 90%;
+    }
+
+    .education > .card > img {
+        width: 15%;
+        margin: 20px;
+    }
+
+    #onhsImg {
+        width: 27%;
+    }
+
+    .education > .card:hover img {
+        transform: scale(125%);
+    }
+
+    /* Work */
+    .work > .workCards {
+        flex-direction: column;
+    }
+
+    .work > .workCards > .workImgs {
+        margin: 5% 0;
+    }
+
+    .workCards:hover .workTxts>h4 {
+        position: inherit;
+    }
+
+    #dacpaImg {
+        width: 50vw;
+    }
+
+    .work > .workCards > .workTxts {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Contact */
+    #contactContainer{
+        height: 100%;
+    }
+    .contact {
+        grid-template-columns: 90%;
+        margin-bottom: 5%;
+    }
+    .contact > .card, .contact > a > .card{
+        height: 25vh;
+    }
+
+}
+
+@media only screen and (max-width: 1254px) {
+    #workContainer {
+        height: 100%;
+    }
+
+    .work > .workCards > .workImgs {
+        width: 100%;
+    }
+
+    .work > .workCards > .workImgs > img {
+        width: 20vw;
+    }
+
+    #dacpaImg {
+        height: 30%;
+        width: 25vw;
+    }
+}
+
+/* End of Media Queries */

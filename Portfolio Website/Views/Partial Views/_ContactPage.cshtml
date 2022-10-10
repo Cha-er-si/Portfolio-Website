@@ -1,27 +1,45 @@
-﻿<div class="headers" id="contactContainer">
+﻿@{
+    var email = "vpcharles31@gmail.com";
+    var mailtogmail = "https://mail.google.com/mail/?view=cm&fs=1&to=";
+    var sendEmail = mailtogmail + email;
+    var phoneNumber = "09954610386";
+}
+@{
+    ViewBag.Title = "Contact";
+}
+
+<div class="headers" id="contactContainer">
     <div class="contactHeader">
         <h1>Contact Me</h1>
     </div>
     <div class="contact">
-        <div class="card">
-            <i class="fa fa-phone-square fa-5x" aria-hidden="true"></i>
-            <h3>Phone Number</h3>
-            <h4>09954610386</h4>
-        </div>
-        <div class="card">
-            <i class="fa fa-envelope fa-5x" aria-hidden="true"></i>
-            <h3>Email</h3>
-            <h4>vpcharles31@gmail.com</h4>
-        </div>
-        <div class="card">
-            <i class="fa fa-linkedin-square fa-5x" aria-hidden="true"></i>
-            <h3>LinkedIn</h3>
-            <h4>Prince Charles Velarde</h4>
-        </div>
-        <div class="card">
-            <i class="fa fa-github-square fa-5x" aria-hidden="true"></i>
-            <h3>Github</h3>
-            <h4>Cha-er-si</h4>
-        </div>
+        <a class="contactLinks" href="tel:@phoneNumber">
+            <div class="card">
+                <i class="fa fa-phone-square fa-5x" aria-hidden="true"></i>
+                <h3>Phone Number</h3>
+                <h4>09954610386</h4>
+            </div>
+        </a>
+        <a class="contactLinks" href="@sendEmail" target="_blank">
+            <div class="card">
+                <i class="fa fa-envelope fa-5x" aria-hidden="true"></i>
+                <h3>Email</h3>
+                <h4>vpcharles31@gmail.com</h4>
+            </div>
+        </a>
+        <a class="contactLinks" href="https://www.linkedin.com/in/prince-charles-velarde-19798a210" target="_blank">
+            <div class="card">
+                <i class="fa fa-linkedin-square fa-5x" aria-hidden="true"></i>
+                <h3>LinkedIn</h3>
+                <h4>Prince Charles Velarde</h4>
+            </div>
+        </a>
+        <a class="contactLinks" href="https://www.github.com/Cha-er-si" target="_blank">
+            <div class="card">
+                <i class="fa fa-github-square fa-5x" aria-hidden="true"></i>
+                <h3>Github</h3>
+                <h4>Cha-er-si</h4>
+            </div>
+        </a>
     </div>
 </div>
