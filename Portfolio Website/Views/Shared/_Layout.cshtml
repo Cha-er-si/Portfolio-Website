@@ -6,6 +6,7 @@
     <title>@ViewBag.Title - Charles Portfolio</title>
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/font-awesome.min.css")
+    @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
@@ -39,6 +40,11 @@
         @{
             @Html.Partial("_Footer");
         }
+        <div class="scroll-to-top-container">
+            <a class="scroll-to-top-button" href="#">
+                ^
+            </a>
+        </div>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
@@ -46,7 +52,7 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
-@*<script>
+<script>
     //const currentLocation = location.href;
     //const menuItem = document.querySelectorAll('.nav-link');
     //const menuLength = menuItem.length;
@@ -56,22 +62,31 @@
     //        menuItem[i].className = "nav-link active";
     //    }
     //}
-    const headers = document.querySelector('.headers');
+    //const headers = document.querySelector('.headers');
 
-    window.addEventListener('scroll', checkHeaders);
+    //window.addEventListener('scroll', checkHeaders);
 
-    function checkHeaders() {
-        const triggerBottom = window.innerHeight / 5 * 4;
+    //function checkHeaders() {
+    //    const triggerBottom = window.innerHeight / 5 * 4;
 
-        headers.forEach(header => {
-            const headerTop = header.getBoundingClientRect().top;
+    //    headers.forEach(header => {
+    //        const headerTop = header.getBoundingClientRect().top;
 
-            if (headerTop < triggerBottom) {
-                header.classList.add('show');
-            }
-            else {
-                header.classList.remove('show');
-            }
+    //        if (headerTop < triggerBottom) {
+    //            header.classList.add('show');
+    //        }
+    //        else {
+    //            header.classList.remove('show');
+    //        }
+    //    })
+    //}
+    $(function () {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 5)
+                $(".scroll-to-top-button").addClass("scroll-button-reveal").removeClass("scroll-button-hide");
+            else if ($(window).scrollTop() == 0)
+                $(".scroll-to-top-button").removeClass("scroll-button-reveal").addClass("scroll-button-hide");
         })
-    }
-</script>*@
+    });
+    $()
+</script>

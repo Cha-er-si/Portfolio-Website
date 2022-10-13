@@ -2,13 +2,25 @@
     ViewBag.Title = "Home";
 }
 
-<div class="headers" id="greetingsContainer">
+<section class="headers" id="greetingsContainer">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
     <div class="greetingsText">
         <h1>Good day!</h1>
     </div>
     <div class="nameText">
         <h1>I'm Prince Charles</h1>
     </div>
-    <div class="circle1"></div>
-    <div class="circle2"></div>
-</div>
+
+</section>
+@*<script>
+    $(function () {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() == 0)
+                console.log("Scrolled");
+                /*$("nav").css("display", "none");*/
+            else if ($(window).scrollTop() < $("#greetingsContainer").height())
+                $(".nameText").append("button");
+        })
+    });
+</script>*@
